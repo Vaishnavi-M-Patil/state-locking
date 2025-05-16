@@ -6,7 +6,7 @@ The problems arise when two developers try to update the same terraform state fi
 
 But because of the agile working environment, we can not guarantee that incremental updates on terraform state files will be performed one after another. Any developer can update and push terraform state file at any point in time, so there should be some provision to prevent a developer from writing or updating terraform file when it is already being used by another developer.
 
-<u><b>Why Terraform State Locking is important?-</b></u> It prevents Terraform state file(terraform.tfstate) from accidental updates by putting a lock on file so that the current update can be finished before processing the new change. The feature of Terraform state locking is supported by AWS S3 and Dynamo DB.
+<b>Why Terraform State Locking is important?-</b> It prevents Terraform state file(terraform.tfstate) from accidental updates by putting a lock on file so that the current update can be finished before processing the new change. The feature of Terraform state locking is supported by AWS S3 and Dynamo DB.
 
 ## Steps:
 ## 1. How to store Terraform state file remotely on S3?
